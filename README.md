@@ -35,17 +35,15 @@ The application can be used to test and monitor:
 ```text
 +-------------------+
 |  Mechanism Tester |
-|     Desktop App   |
+|        App        |
 +---------+---------+
           |
-          | Serial Communication
+          | Bluetooth Communication
           |
 +---------v---------+
 |   Microcontroller |
-| (ESP32 / Arduino) |
+|        ESP32      |
 +---------+---------+
           |
           |
-  +-------+-------+
-  |               |
-Servos       Sensors
+       Actuator
