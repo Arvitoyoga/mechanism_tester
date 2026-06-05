@@ -1,17 +1,51 @@
-# mechanism_tester
+# Mechanism Tester
 
-A new Flutter project.
+Mechanism Tester is a desktop application developed to monitor, test, and control multiple robotic and UAV mechanisms from a single interface.
 
-## Getting Started
+The application serves as a testing platform during development, allowing operators to verify actuator functionality, monitor system status, and manually control connected mechanisms before deployment.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Real-time mechanism monitoring
+- Manual actuator control
+- Servo testing interface
+- Sequential dropping mechanism control
+- System status monitoring
+- Easy-to-use graphical interface
+- Designed for rapid debugging and development
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Supported Mechanisms
+
+The application can be used to test and monitor:
+
+- Servo-based dropping mechanisms
+- Payload release systems
+- Robotic actuators
+- UAV deployment mechanisms
+- Custom embedded systems
+
+---
+
+## System Architecture
+
+```text
++-------------------+
+|  Mechanism Tester |
+|     Desktop App   |
++---------+---------+
+          |
+          | Serial Communication
+          |
++---------v---------+
+|   Microcontroller |
+| (ESP32 / Arduino) |
++---------+---------+
+          |
+          |
+  +-------+-------+
+  |               |
+Servos       Sensors
